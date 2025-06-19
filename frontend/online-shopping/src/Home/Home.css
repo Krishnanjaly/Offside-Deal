@@ -1,6 +1,6 @@
 body
 {
-  background-color: #0a0f1c;
+  background-color: #0a0f1c !important;
 }
 .slideshow {
   width: 100%;

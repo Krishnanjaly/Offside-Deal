@@ -8,6 +8,9 @@ import custom from "./Custom.jpg"
 import gear from "./Football Gear.jpg"
 import apparel from "./apparel.jpg"
 import { Link } from 'react-router-dom';
+import Footwear from '../Things/footwear.jsx';
+import Apparel from '../Things/apparel.jsx';
+import Football from '../Things/football.jsx';
 
 
 function Home() {
@@ -59,22 +62,28 @@ function Home() {
       
       <div className="things">
         <div className='footweart'>
+          <Link to='/Footwear'>
           <img src='https://5.imimg.com/data5/SELLER/Default/2024/2/391075156/GS/YS/JM/115368345/football-shoes-for-players.jpg ' width="150" height="150"/>
           <br></br>
-          <a href='#'>Footwear</a>
+          Footwear
           <p>20% off</p>
+          </Link>
         </div>
         <div className='apparelt'>
+          <Link to="/Apparel">
           <img src={apparel} width="150" height="150"/>
           <br></br>
-          <a href='#'>Apparel</a>
+          Apparel
           <p>50% off</p>
+          </Link>
         </div>
         <div className='geart'>
+          <Link to="/Football">
           <img src={gear} width="150" height="150"/>
           <br></br>
-          <a href='#'>Football Gear</a>
+          Football Gear
           <p>30% off</p>
+          </Link>
         </div>
         
         <div className='collect'>
@@ -86,7 +95,7 @@ function Home() {
         <div className='custom'>
           <img src={custom} width="150" height="150"/>
           <br></br>
-          <a href='#'>Customisation</a>
+          <Link to='/Custom'>Customisation</Link>
           <p>20% off</p>
         </div>
       </div>
