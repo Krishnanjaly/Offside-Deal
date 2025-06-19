@@ -1,4 +1,4 @@
-import Item_desc from "./components/item_desc";
+import Item_desc from "../Cart/components/item_desc";
 import jerseyImage from "../Cart/Cart_asset/jersey/item1/i1.png";
 import thumb1 from "../Cart/Cart_asset/jersey/item1/i2.png";
 import thumb2 from "../Cart/Cart_asset/jersey/item1/i3.png";
