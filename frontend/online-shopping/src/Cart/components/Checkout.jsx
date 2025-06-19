@@ -28,7 +28,7 @@ const handleBackHome = () => {
 
       
       <div className="checkout-section">
-        <h2>Customer Information</h2>
+        <h2 className='h22'>Customer Information</h2>
         <input type="text" placeholder="Full Name" />
         <input type="text" placeholder="Phone Number" />
         <input type="email" placeholder="Email Address" />
@@ -37,7 +37,7 @@ const handleBackHome = () => {
 
       
        <div className="checkout-section">
-        <h2>Order Summary</h2>
+        <h2 className='h22'>Order Summary</h2>
         {cartItems.length > 0 ? (
           cartItems.map((item, index) => (
             <div className="order-item" key={index}>
@@ -66,10 +66,10 @@ const handleBackHome = () => {
 
      
       <div className="checkout-section">
-        <h2>Payment Method</h2>
-        <label><input type="radio" name="payment" /> Cash on Delivery</label>
-        <label><input type="radio" name="payment" /> UPI / Wallet</label>
-        <label><input type="radio" name="payment" /> Credit / Debit Card</label>
+        <h2 className='h22'>Payment Method</h2>
+        <label className='lab'><input type="radio" name="payment" /> Cash on Delivery</label>
+        <label className='lab'><input type="radio" name="payment" /> UPI / Wallet</label>
+        <label className='lab'><input type="radio" name="payment" /> Credit / Debit Card</label>
       </div>
 
      

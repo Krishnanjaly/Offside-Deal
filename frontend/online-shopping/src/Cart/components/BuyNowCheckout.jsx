@@ -24,10 +24,10 @@ const handleBackHome = () => {
 
   return (
     <div className="checkout-container">
-      <h1>Buy Now Checkout</h1>
+      <h1>Checkout</h1>
 
       <div className="checkout-section">
-        <h2>Customer Information</h2>
+        <h2 className="h22">Customer Information</h2>
         <input type="text" placeholder="Full Name" />
         <input type="text" placeholder="Phone Number" />
         <input type="email" placeholder="Email Address" />
@@ -35,7 +35,7 @@ const handleBackHome = () => {
       </div>
 
       <div className="checkout-section">
-        <h2>Item Summary</h2>
+        <h2 className="h22">Item Summary</h2>
         <div className="order-item">
           <img src={item.mainImage} alt={item.title} width="80" />
           <div>
@@ -53,10 +53,10 @@ const handleBackHome = () => {
       </div>
 
       <div className="checkout-section">
-        <h2>Payment Method</h2>
-        <label><input type="radio" name="payment" /> Cash on Delivery</label>
-        <label><input type="radio" name="payment" /> UPI / Wallet</label>
-        <label><input type="radio" name="payment" /> Credit / Debit Card</label>
+        <h2 className="h22">Payment Method</h2>
+        <label className="lab"><input type="radio" name="payment" /> Cash on Delivery</label>
+        <label className="lab"><input type="radio" name="payment" /> UPI / Wallet</label>
+        <label className="lab"><input type="radio" name="payment" /> Credit / Debit Card</label>
       </div>
 
       <button className="place-order-btn" onClick={handlePlaceOrder}>

@@ -68,7 +68,7 @@ function Item_desc({ item, addToCart,navigate  }) {
             </li>
             <li className="itm_im_dett">
               <div className="product-details">
-                <h1 className="product-title">{item.title}</h1>
+                <h3 className="product-title">{item.title}</h3>
                 <div className="rating">{item.rating}</div>
                 <div className="badge">{item.badge}</div>
                 <div className="price-section">
@@ -84,10 +84,10 @@ function Item_desc({ item, addToCart,navigate  }) {
                 </div>
                 <div className="offers">{item.offers}</div>
                 <div className="highlights">
-                  <h2>Product Highlights</h2>
+                  <h2 className="h22">Product Highlights</h2>
                   <ul>
                     {item.highlights.map((point, index) => (
-                      <li key={index}>{point}</li>
+                      <li className="l11" key={index}>{point}</li>
                     ))}
                   </ul>
                 </div>
@@ -100,8 +100,8 @@ function Item_desc({ item, addToCart,navigate  }) {
 
 
         <div className="description">
-          <h2>About this item</h2>
-          <p>{item.description}</p>
+          <h2 className="h22">About this item</h2>
+          <div>{item.description}</div>
         </div>
       </div>
 

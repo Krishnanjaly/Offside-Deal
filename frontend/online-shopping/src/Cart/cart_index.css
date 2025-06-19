@@ -1,3 +1,7 @@
+h2{
+  color: #00cfff;
+  font-size: large;
+}
 
 .main-image img {
   transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
@@ -132,7 +136,8 @@ ul{
 
 .checkout-section input,
 .checkout-section textarea {
-  width: 100%;
+  width: 90%;
+  
   padding: 12px;
   margin: 8px 0;
   border-radius: 8px;
@@ -209,7 +214,7 @@ ul{
 
 .success-icon {
   font-size: 64px;
-  color: #28a745;
+  color: #0A0F1C;
   margin-bottom: 20px;
 }
 
@@ -277,3 +282,44 @@ ul{
   background: #1d2939;
 }
 
+
+.product-title{
+  font-size: x-large;
+}
+.h22{
+  padding-left: 1px;
+
+}
+.l11{
+  padding-left: 10px;
+  
+  color: rgb(255, 255, 255);
+}
+.success{
+  font-size: xx-large;
+  color: #0A0F1C;
+}
+.h44{
+  color: #0A0F1C;
+  font-size: larger;
+}
+.pp{
+  color: #0A0F50;
+}
+.lab{
+  color: #00cfff;
+  display: inline-block;
+  margin: 20px;
+}
+.proc{
+  background-color: #0A0F1C;
+  color: white;
+}
+.removebtn{
+  background-color: rgb(255, 255, 255);
+  color: #0A0F1C;
+  font-weight: bold;
+  border-radius:5px ;
+  width: 100px;
+  height: 30px;
+}

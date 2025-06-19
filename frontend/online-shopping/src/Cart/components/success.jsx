@@ -10,40 +10,40 @@ const Success = () => {
     <div className="success-container">
       <div className="success-card">
         <div className="success-icon"></div>
-        <h1>Order Successfully Placed!</h1>
-        <p>Thank you for shopping with <strong>OffSideDeals ⚽</strong></p>
+        <h3 className="success">Order Successfully Placed!</h3>
+        <p className="pp">Thank you for shopping with <strong>OffSideDeals ⚽</strong></p>
         <div className="order-number">Order Number: <span>#{orderNumber}</span></div>
 
         <div className="status-section">
-          <h2>What's Next?</h2>
+         
           <div className="status-item">
             <span className="status-icon"></span>
             <div>
-              <h4>Order Confirmed</h4>
-              <p>Your order has been received and is being processed</p>
+              <h4 className="h44">Order Confirmed</h4>
+              <p className="pp">Your order has been received and is being processed</p>
             </div>
           </div>
           <div className="status-item">
             <span className="status-icon"></span>
             <div>
-              <h4>Preparing Your Order</h4>
-              <p>We're getting your football gear ready for shipment</p>
+              <h4 className="h44">Preparing Your Order</h4>
+              <p className="pp">We're getting your football gear ready for shipment</p>
             </div>
           </div>
           <div className="status-item">
             <span className="status-icon"></span>
             <div>
-              <h4>On Its Way</h4>
-              <p>You'll receive tracking info once shipped</p>
+              <h4 className="h44">On Its Way</h4>
+              <p className="pp">You'll receive tracking info once shipped</p>
             </div>
           </div>
         </div>
 
         <div className="order-summary">
-          <h2>Order Summary</h2>
-          <p><strong>Order Number:</strong> #{orderNumber}</p>
-          <p><strong>Estimated Delivery:</strong> 3-5 business days</p>
-          <p><strong>Payment Method:</strong> **** 1234</p>
+          <p  className="pp">Order Summary</p>
+          <p className="pp"><strong>Order Number:</strong> #{orderNumber}</p>
+          <p className="pp"><strong>Estimated Delivery:</strong> 3-5 business days</p>
+          <p className="pp"><strong>Payment Method:</strong> **** 1234</p>
         </div>
 
         <div className="success-buttons">

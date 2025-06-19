@@ -1,3 +1,4 @@
+import { color } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
 function Cart({ cartItems, removeFromCart }) {
@@ -38,7 +39,7 @@ function Cart({ cartItems, removeFromCart }) {
                   onClick={() => {
                    
                     removeFromCart(index);
-                  }}
+                  }}className="removebtn"
                   
                 >
                   Remove
@@ -51,15 +52,15 @@ function Cart({ cartItems, removeFromCart }) {
             className="cartButton"
              onClick={() => navigate("/checkout", { state: { cartItems } })}
             style={{
-              background: "green",
-              color: "white",
+              background: "white",
+              color: "oaof1c",
               border: "none",
               padding: "10px 20px",
               borderRadius: "5px",
               marginTop: "10px",
             }}
           >
-            Proceed to Checkout
+           Proceed to Checkout
           </button>
         </>
       )}
