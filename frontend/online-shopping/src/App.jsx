@@ -6,7 +6,7 @@ import Footwear from './Things/footwear.jsx';
 import Apparel from './Things/apparel.jsx';
 import Football from './Things/football.jsx';
 import Custom from './Things/custom.jsx';
-import Appp from './Cart/Appp.jsx';
+
 
 
 
