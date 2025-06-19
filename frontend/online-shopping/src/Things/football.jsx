@@ -136,7 +136,7 @@ function Football() {
                 <h2>{item.title}</h2>
                 <div>
                   <p>{item.price}</p>
-                  <Link to="/Apparel">View</Link>
+                  <Link to="/Exam">View</Link>
                 </div>
               </article>
             ))}
