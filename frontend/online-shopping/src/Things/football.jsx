@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./football.css";
 import logoImg from "./logo.png";
+import { Link } from "react-router-dom";
 
 function Football() {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -135,7 +136,7 @@ function Football() {
                 <h2>{item.title}</h2>
                 <div>
                   <p>{item.price}</p>
-                  <a href="#">View</a>
+                  <Link to="/Cartmain">View</Link>
                 </div>
               </article>
             ))}
