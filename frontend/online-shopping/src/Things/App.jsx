@@ -6,7 +6,7 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom';
 import Apparel from './apparel'
 import Football from './football'
-import Footwear from './Footwear'
+import Footwear from './footwear'
 
 
 function App() {
