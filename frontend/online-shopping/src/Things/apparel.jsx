@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './apparel.css';
 import logoImg from "./logo.png";
 import { useNavigate } from "react-router-dom";
+import Navv from '../Home/Navv';
 
 
 function Apparel() {
@@ -27,10 +28,7 @@ function Apparel() {
 
   return (
     <div id="d1">
-      <div id="d2">
-        <img id="logo" src={logoImg} alt="logo" width="150px" />
-        <button onClick={() => navigate("/Home")}>HOME</button>
-      </div>
+      <Navv/>
 
       <h1>APPARELS</h1>
 

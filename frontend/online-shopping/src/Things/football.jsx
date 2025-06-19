@@ -3,6 +3,7 @@ import "./football.css";
 import logoImg from "./logo.png";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Navv from "../Home/Navv";
 
 
 function Football() {
@@ -28,11 +29,7 @@ function Football() {
 
   return (
     <div id="d1">
-      <div id="d2">
-        <img id="logo" src={logoImg} alt="logo" width="150px" />
-        <button onClick={() => navigate("/Home")}>HOME</button>
-
-      </div>
+      <Navv/>
 
       <h1>FOOTBALLS</h1>
 

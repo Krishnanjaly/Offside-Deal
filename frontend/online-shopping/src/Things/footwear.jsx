@@ -5,6 +5,7 @@
   import logoImg from "./logo.png";
   import { useNavigate } from "react-router-dom";
   import { Link } from "react-router-dom";
+import Navv from "../Home/Navv";
 
 
   function Footwear() {
@@ -32,11 +33,7 @@
 
     return (
       <div id="d1">
-        <div id="d2">
-          <img id="logo" src={logoImg} alt="logo" width="150px" />
-          <button onClick={() => navigate("/Home")}>HOME</button>
-
-        </div>
+        <Navv/>
 
         <h1>FOOTWEAR</h1>
 
