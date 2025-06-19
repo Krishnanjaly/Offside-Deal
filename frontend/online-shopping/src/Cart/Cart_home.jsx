@@ -8,9 +8,9 @@ import { useNavigate } from "react-router-dom";
 function Homee({ addToCart }) {
   const navigate = useNavigate();
 
-  const handleCart = () => {
-    navigate("/cart");
-  };
+  // const handleCart = () => {
+  //   navigate("/cart");
+  // };
 
   const itemDetails = {
     title: "Teky Argentina Football Jersey 2025",
@@ -31,12 +31,11 @@ function Homee({ addToCart }) {
     offers: "Free delivery for orders above ₹999",
   };
 
-  return (
+   return (
     <>
-      <button onClick={handleCart}>Go to Cart</button>
-      <Item_desc item={itemDetails} addToCart={addToCart} />
+      <button onClick={() => navigate("/cart")}>Go to Cart</button>
+      <Item_desc item={itemDetails} addToCart={addToCart} navigate={navigate} />
     </>
   );
 }
-
 export default Homee;
