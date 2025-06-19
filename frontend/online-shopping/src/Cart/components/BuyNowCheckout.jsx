@@ -11,7 +11,7 @@ function BuyNowCheckout() {
   };
 
 const handleBackHome = () => {
-    navigate("/");
+    navigate("/HomeCart");
   };
   const getEstimatedDeliveryDate = () => {
     const today = new Date();

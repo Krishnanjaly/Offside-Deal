@@ -10,7 +10,7 @@ function Checkout({ cartItems }) {
     navigate('/success');
   };
 const handleBackHome = () => {
-    navigate("/");
+    navigate("/HomeCart");
   };
    const getEstimatedDeliveryDate = () => {
     const today = new Date();
