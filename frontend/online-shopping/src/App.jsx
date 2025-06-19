@@ -7,6 +7,7 @@ import Apparel from './Things/apparel.jsx';
 import Football from './Things/football.jsx';
 import Custom from './Things/custom.jsx';
 
+
 import Homee from './Cart/Cart_home.jsx';
 import Checkout from './Cart/components/Checkout.jsx';
 import Success from './Cart/components/success.jsx';
@@ -40,7 +41,7 @@ function App() {
         <Route path="/Custom" element={<Custom />} />
         <Route path="/Signup" element={<Signup />} />
 
-        <Route path="/HomeCart" element={<Homee addToCart={addToCart} />} />
+        <Route path="/HomeCart" element={<Homee addToCart={addToCart}/>}/>
         <Route path="/checkout" element={<Checkout cartItems={cartItems} />} />
         <Route path="/success" element={<Success />} />
         <Route path="/cart" element={<Cart cartItems={cartItems} removeFromCart={removeFromCart} />}/>
