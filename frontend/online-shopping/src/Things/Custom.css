@@ -19,5 +19,26 @@ h2{
   font-size: small;
   padding-left: 500px;
 }
+.top-link {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+
+.top-link a {
+  text-decoration: none;
+  color: #00cfff;
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: #ffffff10;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.top-link a:hover {
+  background-color: #00cfff;
+  color: #0A0F1C;
+}
 
 
