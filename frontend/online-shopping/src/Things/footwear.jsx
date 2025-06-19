@@ -3,9 +3,13 @@
 import React, { useState, useEffect } from "react";
 import "./Footwear.css";
 import logoImg from "./logo.png";
+import { useNavigate } from "react-router-dom";
+
 
 function Footwear() {
   const [slideIndex, setSlideIndex] = useState(0);
+  const navigate = useNavigate();
+
 
   const slideImages = [
     "https://static.dezeen.com/uploads/2024/07/f50-adidas-football-super-shoe_dezeen_2364_sq_4.jpg",
@@ -29,7 +33,8 @@ function Footwear() {
     <div id="d1">
       <div id="d2">
         <img id="logo" src={logoImg} alt="logo" width="150px" />
-        <button onClick={() => window.location.href = "#"}>HOME</button>
+        <button onClick={() => navigate("/Home")}>HOME</button>
+
       </div>
 
       <h1>FOOTWEAR</h1>
