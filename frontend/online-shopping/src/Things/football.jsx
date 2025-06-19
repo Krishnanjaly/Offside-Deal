@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./football.css";
 import logoImg from "./logo.png";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 function Football() {
   const [slideIndex, setSlideIndex] = useState(0);
+  const navigate = useNavigate();
 
   const slideImages = [
     "https://res.cloudinary.com/confirmed-web/image/upload/c_lfill,w_800,h_900,c_fill/v1710404021/adidas-group/I3S/stories/images/adidas-world-cup-football-history-archive-gameplana-Telstar18_1-scaled-1440x9999_w1a0q7.jpg",
@@ -27,7 +30,8 @@ function Football() {
     <div id="d1">
       <div id="d2">
         <img id="logo" src={logoImg} alt="logo" width="150px" />
-        <button onClick={() => window.location.href = "#"}>HOME</button>
+        <button onClick={() => navigate("/Home")}>HOME</button>
+
       </div>
 
       <h1>FOOTBALLS</h1>
