@@ -6,7 +6,9 @@ import Footwear from './Things/footwear.jsx';
 import Apparel from './Things/apparel.jsx';
 import Football from './Things/football.jsx';
 import Custom from './Things/custom.jsx';
-import Exa from './Login/exam.jsx';
+
+import Appp from './Cart/Appp.jsx';
+
 
 
 function App() {
@@ -16,7 +18,8 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Footwear" element={<Footwear />} />
-        <Route path="/Exam" element={<Exa />} />
+         <Route path="/Exam" element={<Appp />} />
+        
         <Route path="/Apparel" element={<Apparel />} />
         <Route path="/Football" element={<Football />} />
         <Route path="/Custom" element={<Custom />} />
