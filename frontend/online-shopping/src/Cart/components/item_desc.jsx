@@ -2,110 +2,109 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { useLocation, useNavigate } from "react-router";
 
-function Item_desc({ item,addToCart }) {
+function Item_desc({ item, addToCart,navigate  }) {
   const [activeImage, setActiveImage] = useState(item.mainImage);
   const [showModal, setShowModal] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleBuyNow = () => {
-  navigate("/Bcheckout", { state: { item } });
-
-};
+    navigate("/Bcheckout", { state: { item } });
+  };
 
   return (
     <>
-    <div className="tot">
+      <div className="tot">
         <div className="Main_content">
-        <ul>
+          <ul>
             <li className="itm_im_dett">
-                <div className="image-gallery">
-                  <ul>
-                    <li className="itm_im_det">
-                      <div className="main-image">
-                        <motion.img
+              <div className="image-gallery">
+                <ul>
+                  <li className="itm_im_det">
+                    <div className="main-image">
+                      <motion.img
                         src={activeImage}
                         alt="Main Product"
-                        style={{ width: "400px",cursor: "zoom-in" }}       
-                        key={activeImage}  
+                        style={{ width: "400px", cursor: "zoom-in" }}
+                        key={activeImage}
                         className="fade-in"
                         onClick={() => setShowModal(true)}
-                        />
-                        
+                      />
+
                     </div>
-                    </li>
-                    <li className="itm_im_det">
+                  </li>
+                  <li className="itm_im_det">
                     <div className="thumbnails">
-                {item.thumbnails.map((thumb, index) => (
-                <motion.img
-                    className={activeImage === thumb ? "active-thumb" : ""}                
-                    key={index}
-                    src={thumb}
-                   alt={`thumb-${index}`}
+                      {item.thumbnails.map((thumb, index) => (
+                        <motion.img
+                          className={activeImage === thumb ? "active-thumb" : ""}
+                          key={index}
+                          src={thumb}
+                          alt={`thumb-${index}`}
 
-                    onClick={() => setActiveImage(thumb)}
-                    style={{
-                    cursor: "pointer",
-                    
-                    width: "60px",
-                    margin: "5px",
-                    border:
-                        activeImage === thumb ? "2px solid #000" : "none",
-                    }}
-                />
-                ))}
-            </div>
-                    </li>
+                          onClick={() => setActiveImage(thumb)}
+                          style={{
+                            cursor: "pointer",
 
-                    </ul>
-                
+                            width: "60px",
+                            margin: "5px",
+                            border:
+                              activeImage === thumb ? "2px solid #000" : "none",
+                          }}
+                        />
+                      ))}
+                    </div>
+                  </li>
 
-            
-            </div>
-            {showModal && (
-            <div className="zoom-modal" onClick={() => setShowModal(false)}>
-            <img src={activeImage} alt="Zoomed Product" />
-            </div>
-            )}
+                </ul>
+
+
+
+              </div>
+              {showModal && (
+                <div className="zoom-modal" onClick={() => setShowModal(false)}>
+                  <img src={activeImage} alt="Zoomed Product" />
+                </div>
+              )}
             </li>
             <li className="itm_im_dett">
-                <div className="product-details">
+              <div className="product-details">
                 <h1 className="product-title">{item.title}</h1>
                 <div className="rating">{item.rating}</div>
                 <div className="badge">{item.badge}</div>
                 <div className="price-section">
-                    <span className="price">{item.price}</span>
-                    <span className="discount">{item.discount}</span>
+                  <span className="price">{item.price}</span>
+                  <span className="discount">{item.discount}</span>
                 </div>
                 <div className="stock-status">{item.stockStatus}</div>
                 <div className="quantity-cart">
-                   <button onClick={() => addToCart(item)}>Add to Cart</button>
+                  <button onClick={() => addToCart(item)}>Add to Cart</button>
 
 
-                    <button onClick={handleBuyNow}>Buy Now</button>
+                  <button onClick={handleBuyNow}>Buy Now</button>
                 </div>
                 <div className="offers">{item.offers}</div>
                 <div className="highlights">
-                <h2>Product Highlights</h2>
-                <ul>
-                  {item.highlights.map((point, index) => (
-                    <li key={index}>{point}</li>
-                  ))}
-                </ul>
-              </div>
+                  <h2>Product Highlights</h2>
+                  <ul>
+                    {item.highlights.map((point, index) => (
+                      <li key={index}>{point}</li>
+                    ))}
+                  </ul>
                 </div>
+              </div>
             </li>
-            
-        </ul>
+
+          </ul>
+        </div>
+
+
+
+        <div className="description">
+          <h2>About this item</h2>
+          <p>{item.description}</p>
+        </div>
       </div>
 
-      
-
-      <div className="description">
-        <h2>About this item</h2>
-        <p>{item.description}</p>
-      </div>
-    </div>
-      
     </>
   );
 

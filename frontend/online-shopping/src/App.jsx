@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import Home from './Home/Home.jsx'
 import Login from './Login/Login.jsx';
 import Signup from './Signup/Signup.jsx';
@@ -15,7 +15,8 @@ import Appp from './Cart/Appp.jsx';
 function App() {
    
   return (
-    <>
+    
+    <BrowserRouter>
       <Routes>
         <Route path="/Home" element={<Home />} />
         <Route path="/Login" element={<Login />} />
@@ -34,8 +35,9 @@ function App() {
 
         
       </Routes>
-    </>
+      </BrowserRouter>
+    
   );
 }
 
-export default App;
+export default App;
