@@ -6,8 +6,7 @@ import Footwear from './Things/footwear.jsx';
 import Apparel from './Things/apparel.jsx';
 import Football from './Things/football.jsx';
 import Custom from './Things/custom.jsx';
-
-import Cg from './GG.jsx';
+import Exa from './Login/exam.jsx';
 
 
 function App() {
@@ -17,14 +16,14 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Footwear" element={<Footwear />} />
+        <Route path="/Exam" element={<Exa />} />
         <Route path="/Apparel" element={<Apparel />} />
         <Route path="/Football" element={<Football />} />
         <Route path="/Custom" element={<Custom />} />
-        <Route path="/Cartmain" element={<Cg/>} />
         <Route path="/Signup" element={<Signup />} />
       </Routes>
     </>
   );
 }
 
-export default App;
+export default App;

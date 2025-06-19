@@ -6,7 +6,7 @@ import Cart from './components/cart_item.jsx';
 import { useState } from 'react';
 import BuyNowCheckout from './components/BuyNowCheckout.jsx';
 
-function App() {
+function Appp() {
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (item) => {
@@ -33,4 +33,4 @@ function App() {
   );
 }
 
-export default App;
+export default Appp;
