@@ -87,16 +87,20 @@ function Home() {
         </div>
         
         <div className='collect'>
+          <Link to='/Custom'>
           <img src='https://www.shutterstock.com/image-photo/football-trophy-collection-260nw-1271086963.jpg' width="150" height="150"/>
           <br></br>
-          <a href='#'>Seasonal Collections</a>
+          Seasonal Collections
           <p>70% off</p>
+          </Link>
         </div>
         <div className='custom'>
+          <Link to='/Custom'>
           <img src={custom} width="150" height="150"/>
           <br></br>
-          <Link to='/Custom'>Customisation</Link>
+          Customisation
           <p>20% off</p>
+          </Link>
         </div>
       </div>
 
