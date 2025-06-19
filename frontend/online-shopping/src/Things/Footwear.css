@@ -139,8 +139,9 @@ text-decoration: underline;
 
 h2{
 color: #00cfff;
-font-size: 30px;
-margin-top: 30px;
+font-size: 30px !important;
+margin-top: 30px !important;
+padding-right: 500px;
 }
 
 h3{
