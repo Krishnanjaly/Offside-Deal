@@ -1,0 +1,64 @@
+{
+  "data": [
+    {
+      "title": "Nike Mercurial Superfly 9 Elite FG",
+      "category": "Footwear",
+      "price": "₹16,999",
+      "image": "/images/footwear/mercurial.png"
+    },
+    {
+      "title": "Adidas Predator Accuracy.1 FG",
+      "category": "Footwear",
+      "price": "₹18,499",
+      "image": "/images/footwear/predator.png"
+    },
+    {
+      "title": "Argentina National Team Jersey 2025",
+      "category": "Apparel",
+      "price": "₹3,299",
+      "image": "/images/apparel/argentina_jersey.png"
+    },
+    {
+      "title": "Manchester United Home Kit 2025",
+      "category": "Apparel",
+      "price": "₹3,999",
+      "image": "/images/apparel/manutd_jersey.png"
+    },
+    {
+      "title": "FIFA World Cup 2022 Official Ball",
+      "category": "Football Gear",
+      "price": "₹5,999",
+      "image": "/images/gear/worldcup_ball.png"
+    },
+    {
+      "title": "Pro Training Cones - Set of 50",
+      "category": "Football Gear",
+      "price": "₹1,299",
+      "image": "/images/gear/training_cones.png"
+    },
+    {
+      "title": "Golden Boot Trophy",
+      "category": "Seasonal Collections",
+      "price": "₹4,499",
+      "image": "/images/seasonal/golden_boot.png"
+    },
+    {
+      "title": "Ballon d'Or Trophy Replica",
+      "category": "Seasonal Collections",
+      "price": "₹7,999",
+      "image": "/images/seasonal/ballon_dor.png"
+    },
+    {
+      "title": "Customised Jersey (Any Name & Number)",
+      "category": "Customisation",
+      "price": "₹2,999",
+      "image": "/images/custom/custom_jersey.png"
+    },
+    {
+      "title": "Custom Boot Engraving Service",
+      "category": "Customisation",
+      "price": "₹1,499",
+      "image": "/images/custom/boot_custom.png"
+    }
+  ]
+}

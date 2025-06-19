@@ -46,8 +46,9 @@ footer
 {
   display: inline-flex;
   gap: 83rem;
-  color: #00cfff;
+  color: #444747;
   padding-top: 20px;
+  height: 20px;
 }
 .logos
 {
@@ -139,4 +140,23 @@ a
 {
   color: #00cfff;
   text-decoration: none;
+}
+.search-button {
+  background-color: #1e1e2f;
+  border: none;
+  color: #00ffcc;
+  font-size: 22px;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #00ffcc;
+  color: #1e1e2f;
+}
+
+.bottom{
+  background-color: #00cfff;
+  height: 20px;
 }
