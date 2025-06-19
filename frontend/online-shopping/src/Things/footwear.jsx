@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import "./Footwear.css";
 import logoImg from "./logo.png";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function Footwear() {
@@ -60,7 +61,7 @@ function Footwear() {
             <h2>Predator League Fold-Over Tongue Firm/Multi-Ground Boots</h2>
             <div>
               <p>$500</p>
-              <a href="#">View</a>
+              <Link to="/ApppCart">View</Link>
             </div>
           </article>
 
@@ -69,7 +70,7 @@ function Footwear() {
             <h2>Messi F50 Club Flexible Ground Boots Kids</h2>
             <div>
               <p>$750</p>
-              <a href="#">View</a>
+              <Link to="/ApppCart">View</Link>
             </div>
           </article>
 
@@ -78,7 +79,7 @@ function Footwear() {
             <h2>Nike Mercurial Vapor 16 Elite 'Vini Jr</h2>
             <div>
               <p>$1000</p>
-              <a href="#">View</a>
+              <Link to="/ApppCart">View</Link>
             </div>
           </article>
 
@@ -87,7 +88,7 @@ function Footwear() {
             <h2>Nike Mercurial Vapor 1 RGN SE</h2>
             <div>
               <p>$1200</p>
-              <a href="#">View</a>
+              <Link to="/ApppCart">View</Link>
             </div>
           </article>
 
@@ -96,7 +97,7 @@ function Footwear() {
             <h2>Nike Tiempo Legend 10 Academy</h2>
             <div>
               <p>$2000</p>
-              <a href="#">View</a>
+              <Link to="/ApppCart">View</Link>
             </div>
           </article>
         </div>
@@ -108,7 +109,7 @@ function Footwear() {
           <h2>Safari Men's Football Shoes</h2>
           <div>
             <p>$180</p>
-            <a href="#">View</a>
+            <Link to="/ApppCart">View</Link>
           </div>
         </article>
 
@@ -117,7 +118,7 @@ function Footwear() {
           <h2>Nivia Dagger Men's Football Studs</h2>
           <div>
             <p>$150</p>
-            <a href="#">View</a>
+            <Link to="/ApppCart">View</Link>
           </div>
         </article>
 
@@ -126,7 +127,7 @@ function Footwear() {
           <h2>Ashtang 2.0 Football Studs</h2>
           <div>
             <p>$160</p>
-            <a href="#">View</a>
+            <Link to="/ApppCart">View</Link>
           </div>
         </article>
 
@@ -135,7 +136,7 @@ function Footwear() {
           <h2>Nivia Ignite Adult Football Studs</h2>
           <div>
             <p>$90</p>
-            <a href="#">View</a>
+            <Link to="/ApppCart">View</Link>
           </div>
         </article>
 
@@ -144,7 +145,7 @@ function Footwear() {
           <h2>Encounter Pro 11</h2>
           <div>
             <p>$140</p>
-            <a href="#">View</a>
+            <Link to="/ApppCart">View</Link>
           </div>
         </article>
       </div>
@@ -157,7 +158,7 @@ function Footwear() {
           <h2>Cloudfoam Move Sock Shoes</h2>
           <div>
             <p>$180</p>
-            <a href="#">View</a>
+            <Link to="/ApppCart">View</Link>
           </div>
         </article>
 
@@ -166,7 +167,7 @@ function Footwear() {
           <h2>Ultraboost 1.0 Shoes</h2>
           <div>
             <p>$150</p>
-            <a href="#">View</a>
+            <Link to="/ApppCart">View</Link>
           </div>
         </article>
 
@@ -175,7 +176,7 @@ function Footwear() {
           <h2>Barreda Decode Shoes</h2>
           <div>
             <p>$160</p>
-            <a href="#">View</a>
+            <Link to="/ApppCart">View</Link>
           </div>
         </article>
 
@@ -184,7 +185,7 @@ function Footwear() {
           <h2>Nike Free Metcon 6</h2>
           <div>
             <p>$90</p>
-            <a href="#">View</a>
+            <Link to="/ApppCart">View</Link>
           </div>
         </article>
 
@@ -193,7 +194,7 @@ function Footwear() {
           <h2>Nike Flex Experience Run 12</h2>
           <div>
             <p>$140</p>
-            <a href="#">View</a>
+            <Link to="/ApppCart">View</Link>
           </div>
         </article>
       </div>

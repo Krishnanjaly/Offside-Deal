@@ -7,7 +7,7 @@ import Apparel from './Things/apparel.jsx';
 import Football from './Things/football.jsx';
 import Custom from './Things/custom.jsx';
 
-import Appp from './Cart/Appp.jsx';
+import ApppCart from './Cart/ApppCart.jsx';
 
 
 
@@ -18,7 +18,7 @@ function App() {
         <Route path="/Home" element={<Home />} />
         <Route path="/Login" element={<Login />} />
         <Route path="/Footwear" element={<Footwear />} />
-         <Route path="/Exam" element={<Appp />} />
+        <Route path="/AppCart" element={<ApppCart />} />
         
         <Route path="/Apparel" element={<Apparel />} />
         <Route path="/Football" element={<Football />} />

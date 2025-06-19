@@ -5,8 +5,9 @@ import Homee from './Cart_home.jsx';
 import Cart from './components/cart_item.jsx';
 import { useState } from 'react';
 import BuyNowCheckout from './components/BuyNowCheckout.jsx';
+import { Link } from "react-router-dom";
 
-function Appp() {
+function ApppCart() {
   const [cartItems, setCartItems] = useState([]);
 
   const addToCart = (item) => {
@@ -33,4 +34,4 @@ function Appp() {
   );
 }
 
-export default Appp;
+export default ApppCart;
