@@ -1,11 +1,13 @@
 import { color } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import Navv from "../../Home/Navv";
 
 function Cart({ cartItems, removeFromCart }) {
   const navigate = useNavigate();
 
   return (
     <div>
+      <Navv/>
       <h2>🛒 Your Cart</h2>
 
       {cartItems.length === 0 ? (

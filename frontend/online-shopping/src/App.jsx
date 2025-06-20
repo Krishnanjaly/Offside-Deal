@@ -17,6 +17,7 @@ import { useState } from 'react';
 
 
 
+
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -42,7 +43,7 @@ function App() {
         <Route path="/Custom" element={<Custom />} />
         <Route path="/Signup" element={<Signup />} />
 
-        <Route path="/HomeCart" element={<Homee addToCart={addToCart}/>}/>
+        <Route path="/HomeCart/:id" element={<Homee addToCart={addToCart}/>}/>
         <Route path="/checkout" element={<Checkout cartItems={cartItems} />} />
         <Route path="/success" element={<Success />} />
         <Route path="/cart" element={<Cart cartItems={cartItems} removeFromCart={removeFromCart} />}/>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom"; 
 import logo from "./logo.png";
+import { color } from "framer-motion";
 
 const Login = () => {
   return (
@@ -9,16 +10,17 @@ const Login = () => {
       <img src={logo} alt="background logo" style={styles.backgroundLogo} />
 
       <div style={styles.card}>
-        <h2 style={styles.title}>Offside Deals Login</h2>
+        <h3 style={styles.title}>Offside Deals Login</h3>
 
         <input type="email" placeholder="Email" style={styles.input} />
         <input type="password" placeholder="Password" style={styles.input} />
 
-        <Link to="/Home"><button style={styles.button}>Login</button></Link>
+        <Link to="/Home"><button style={{ backgroundColor: "#0a0f1c", padding: "10px 20px", borderRadius: "8px" ,color:"white"}}
+          >Login</button></Link>
 
         <p style={styles.signupText}>
-          Don’t have an account?{" "}
-          <Link to="/signup" style={styles.signupLink}>
+          Don't have an account?{" "}
+          <Link to="/signup" style={{color:"#0a0f1c"}}>
             Create one
           </Link>
         </p>

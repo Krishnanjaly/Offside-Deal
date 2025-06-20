@@ -6,6 +6,9 @@ h2{
 .main-image img {
   transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
   opacity: 1;
+  width: 550px;
+   cursor: zoom-in;
+   border-radius: 15px;
 }
 
 .main-image img.fade {
@@ -27,13 +30,14 @@ h2{
 }
 .thumbnails img {
   transition: all 0.3s ease;
-  border-radius: 6px;
-  padding: 10px;
+  border-radius: 16px;
+  padding: 5px;
+  margin: 10px;
 }
 
 .thumbnails img:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 8px rgb(13, 145, 147);
 }
 
 .thumbnails img.active-thumb {
@@ -293,7 +297,10 @@ ul{
 .l11{
   padding-left: 10px;
   
-  color: rgb(255, 255, 255);
+ 
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  color: #fffdfd;
 }
 .success{
   font-size: xx-large;
@@ -322,4 +329,11 @@ ul{
   border-radius:5px ;
   width: 100px;
   height: 30px;
+}
+.r{
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  color: #fffdfd;
+
+
 }

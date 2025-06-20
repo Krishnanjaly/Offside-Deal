@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './apparel.css';
 import logoImg from "./logo.png";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Navv from '../Home/Navv';
 import Footer from '../Home/footer';
 
@@ -54,7 +54,8 @@ function Apparel() {
             <h2>Germany 25 Away Jersey</h2>
             <div>
               <p>$500</p>
-              <a href="#">View</a>
+             
+              <Link to="/HomeCart/68554ac32c06e6a960107fb8">View</Link>
             </div>
           </article>
 
@@ -63,7 +64,7 @@ function Apparel() {
             <h2>Italy 25 Away Jersey</h2>
             <div>
               <p>$750</p>
-              <a href="#">View</a>
+              <Link to="/HomeCart/68554ac32c06e6a960107fb8">View</Link>
             </div>
           </article>
 
@@ -72,7 +73,7 @@ function Apparel() {
             <h2>Spain 24 Home Kit</h2>
             <div>
               <p>$1000</p>
-              <a href="#">View</a>
+              <Link to="/HomeCart/68554ac32c06e6a960107fb8">View</Link>
             </div>
           </article>
 
@@ -81,7 +82,7 @@ function Apparel() {
             <h2>Argentina 25/26 Home Jersey</h2>
             <div>
               <p>$1200</p>
-              <a href="#">View</a>
+              <Link to="/HomeCart/68554ac32c06e6a960107fb8">View</Link>
             </div>
           </article>
 
@@ -90,7 +91,7 @@ function Apparel() {
             <h2>Italy Home Jersey</h2>
             <div>
               <p>$2000</p>
-              <a href="#">View</a>
+              <Link to="/HomeCart/68554ac32c06e6a960107fb8">View</Link> 
             </div>
           </article>
         </div>

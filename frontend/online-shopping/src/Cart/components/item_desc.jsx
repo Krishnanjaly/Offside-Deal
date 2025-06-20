@@ -1,14 +1,14 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { useLocation, useNavigate } from "react-router";
+import {  useNavigate } from "react-router-dom";
 
 function Item_desc({ item, addToCart,navigate  }) {
   const [activeImage, setActiveImage] = useState(item.mainImage);
   const [showModal, setShowModal] = useState(false);
-  // const navigate = useNavigate();
+   const navigatee = useNavigate();
 
   const handleBuyNow = () => {
-    navigate("/Bcheckout", { state: { item } });
+    navigatee("/Bcheckout", { state: { item } });
   };
 
   return (
@@ -24,7 +24,7 @@ function Item_desc({ item, addToCart,navigate  }) {
                       <motion.img
                         src={activeImage}
                         alt="Main Product"
-                        style={{ width: "400px", cursor: "zoom-in" }}
+                        
                         key={activeImage}
                         className="fade-in"
                         onClick={() => setShowModal(true)}
@@ -69,20 +69,20 @@ function Item_desc({ item, addToCart,navigate  }) {
             <li className="itm_im_dett">
               <div className="product-details">
                 <h3 className="product-title">{item.title}</h3>
-                <div className="rating">{item.rating}</div>
-                <div className="badge">{item.badge}</div>
+                <div className="r">{item.rating}</div>
+                <div className="r">{item.badge}</div>
                 <div className="price-section">
-                  <span className="price">{item.price}</span>
-                  <span className="discount">{item.discount}</span>
+                  <span className="r">{item.price}</span>
+                  <span className="r">{item.discount}</span>
                 </div>
-                <div className="stock-status">{item.stockStatus}</div>
+                <div className="r">{item.stockStatus}</div>
                 <div className="quantity-cart">
                   <button onClick={() => addToCart(item)}>Add to Cart</button>
 
 
                   <button onClick={handleBuyNow}>Buy Now</button>
                 </div>
-                <div className="offers">{item.offers}</div>
+                <div className="r">{item.offers}</div>
                 <div className="highlights">
                   <h2 className="h22">Product Highlights</h2>
                   <ul>
@@ -101,7 +101,7 @@ function Item_desc({ item, addToCart,navigate  }) {
 
         <div className="description">
           <h2 className="h22">About this item</h2>
-          <div>{item.description}</div>
+          <div className="r">{item.description}</div>
         </div>
       </div>
 

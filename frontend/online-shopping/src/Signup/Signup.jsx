@@ -48,7 +48,7 @@ const Signup = () => {
       <img src={logo} alt="Background Logo" style={styles.backgroundLogo} />
 
       <div style={styles.card}>
-        <h2 style={styles.title}>Create Account</h2>
+        <h3 style={styles.title}>Create Account</h3>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -87,7 +87,7 @@ const Signup = () => {
             required
           />
 
-          <button type="submit" style={styles.button}>
+          <button type="submit" style={{ backgroundColor: "#0a0f1c", padding: "10px 20px", borderRadius: "8px" ,color:"white",marginBottom:"5px"}}>
             Sign Up
           </button>
         </form>

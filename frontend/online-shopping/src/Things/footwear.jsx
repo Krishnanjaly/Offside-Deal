@@ -1,4 +1,3 @@
-  // src/Footwear.jsx
 
   import React, { useState, useEffect } from "react";
   import "./Footwear.css";
@@ -58,8 +57,8 @@ import Footer from "../Home/footer";
               <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/f05893320d6643d8b2d27a611cff4f1b_9366/Predator_League_Fold-Over_Tongue_Firm-Multi-Ground_Boots_White_JP5737_01_00_standard_hover.jpg" alt="boot1" />
               <h2>Predator League Fold-Over Tongue Firm/Multi-Ground Boots</h2>
               <div>
-                <p>$500</p>
-                <Link to="/HomeCart">View</Link>
+                <p>₹4,299</p>
+                <Link to="/HomeCart/68550dfb04c7a69eeecf0845">View</Link>
               </div>
             </article>
 
@@ -67,8 +66,8 @@ import Footer from "../Home/footer";
               <img src="https://assets.adidas.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/712b3d2f205b4ea38beac41ace825b51_9366/Messi_F50_Club_Flexible_Ground_Boots_Kids_Gold_IG9319_01_standard_hover.jpg" alt="boot2" />
               <h2>Messi F50 Club Flexible Ground Boots Kids</h2>
               <div>
-                <p>$750</p>
-                <Link to="/HomeCart">View</Link>
+                <p>₹1,999</p>
+                <Link to="/HomeCart/685543db2c06e6a960107fb6">View</Link>
               </div>
             </article>
 
@@ -77,7 +76,7 @@ import Footer from "../Home/footer";
               <h2>Nike Mercurial Vapor 16 Elite 'Vini Jr</h2>
               <div>
                 <p>$1000</p>
-                <Link to="/HomeCart">View</Link>
+                <Link to="/HomeCart/685541212c06e6a960107fb5">View</Link>
               </div>
             </article>
 
@@ -85,8 +84,8 @@ import Footer from "../Home/footer";
               <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/7a167e7c-08a8-4e76-aa6e-ed80eada8926/MERCURIAL+VAPOR+1+RGN+SE+FG.png" alt="boot4" />
               <h2>Nike Mercurial Vapor 1 RGN SE</h2>
               <div>
-                <p>$1200</p>
-                <Link to="/HomeCart">View</Link>
+                <p>₹26,795.00</p>
+                <Link to="/HomeCart/685541212c06e6a960107fb5">View</Link>
               </div>
             </article>
 
@@ -94,8 +93,8 @@ import Footer from "../Home/footer";
               <img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/65a4b74e-55f9-4744-ac62-3911dbdcb79c/LEGEND+10+ACADEMY+TF.png" alt="boot5" />
               <h2>Nike Tiempo Legend 10 Academy</h2>
               <div>
-                <p>$2000</p>
-                <Link to="/HomeCart">View</Link>
+                <p>₹7,495.00</p>
+                <Link to="/HomeCart/68551f6f1cc0b3f735395ec1">View</Link>
               </div>
             </article>
           </div>
@@ -134,7 +133,7 @@ import Footer from "../Home/footer";
             <h2>Nivia Ignite Adult Football Studs</h2>
             <div>
               <p>$90</p>
-              <Link to="/HomeCart">View</Link>
+              <Link to="/HomeCart/685541212c06e6a960107fb5">View</Link>
             </div>
           </article>
 

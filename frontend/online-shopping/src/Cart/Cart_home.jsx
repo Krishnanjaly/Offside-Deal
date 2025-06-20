@@ -1,41 +1,34 @@
+import { useEffect, useState } from "react";
 import Item_desc from "./components/item_desc";
-import jerseyImage from "../Cart/Cart_asset/jersey/item1/i1.png";
-import thumb1 from "../Cart/Cart_asset/jersey/item1/i2.png";
-import thumb2 from "../Cart/Cart_asset/jersey/item1/i3.png";
+import Navv from "../Home/Navv";
+import axios from "axios";
 import "./cart_index.css"
-import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom"; 
 
 function Homee({ addToCart }) {
-  const navigate = useNavigate();
+  const { id } = useParams(); 
+  const [itemDetails, setItemDetails] = useState(null);
 
-  // const handleCart = () => {
-  //   navigate("/cart");
-  // };
+  useEffect(() => {
+  axios.get(`http://localhost:5000/api/footballs/${id}`)
+    .then((res) => {
+      console.log("Fetched item:", res.data); // confirms object shape
+      setItemDetails(res.data);  // no [0] needed here
+    })
+    .catch((err) => console.error("Error fetching item:", err));
+}, [id]);
 
-  const itemDetails = {
-    title: "Teky Argentina Football Jersey 2025",
-    rating: "★★★★☆ (200 reviews)",
-    badge: "Bestseller",
-    price: "₹3,299",
-    discount: "-20%",
-    stockStatus: "In Stock ✅",
-    mainImage: jerseyImage,
-    thumbnails: [jerseyImage, thumb1, thumb2],
-    highlights: [
-      "Official 2025 Jersey",
-      "Machine Washable",
-      "Breathable fabric",
-    ],
-    description:
-      "Detailed description about the football jersey material, fit, care instructions, and more.",
-    offers: "Free delivery for orders above ₹999",
-  };
 
-   return (
+  if (!itemDetails) {
+    return <div>Loading item...</div>;
+  }
+
+  return (
     <>
-      <button onClick={() => navigate("/cart")}>Go to Cart</button>
-      <Item_desc item={itemDetails} addToCart={addToCart} navigate={navigate} />
+      <Navv />
+      <Item_desc item={itemDetails} addToCart={addToCart} />
     </>
   );
 }
+
 export default Homee;
