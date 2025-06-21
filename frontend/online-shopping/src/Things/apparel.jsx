@@ -82,7 +82,7 @@ function Apparel() {
             <h2>Argentina 25/26 Home Jersey</h2>
             <div>
               <p>$1200</p>
-              <Link to="/HomeCart/68554ac32c06e6a960107fb8">View</Link>
+              <Link to="/HomeCart/6856395d01dcfbbab2a80960">View</Link>
             </div>
           </article>
 
