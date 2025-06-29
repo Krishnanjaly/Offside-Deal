@@ -1,16 +1,21 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-require('dotenv').config();
+const express = require("express");
+const mongoose = require("mongoose");
+const cors = require("cors");
+require("dotenv").config();
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
+// MongoDB connection
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("✅ MongoDB connected"))
-  .catch((err) => console.log("Mongo Error", err));
+  .catch((err) => console.error("Mongo Error", err));
 
+// User Model
+const User = require("./models/User");
+
+// Football Item Schema and Model
 const FootballSchema = new mongoose.Schema({
   title: String,
   price: String,
@@ -24,9 +29,51 @@ const FootballSchema = new mongoose.Schema({
   description: String,
   offers: String
 });
-
 const FootballItem = mongoose.model("FootballItem", FootballSchema);
 
+// ====================== USER ROUTES ======================
+
+// Registration Route
+app.post("/api/register", async (req, res) => {
+  try {
+    const { name, email, password } = req.body;
+
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ error: "Email already registered" });
+    }
+
+    const newUser = new User({ name, email, password });
+    await newUser.save();
+    res.json({ message: "Registration successful ✅" });
+  } catch (error) {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// Login Route
+app.post("/api/login", async (req, res) => {
+  try {
+    const { email, password } = req.body;
+
+    const user = await User.findOne({ email });
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+
+    if (user.password !== password) {
+      return res.status(401).json({ error: "Incorrect password" });
+    }
+
+    res.json({ message: "Login successful ✅", user });
+  } catch (error) {
+    res.status(500).json({ error: "Server Error" });
+  }
+});
+
+// ====================== FOOTBALL ITEM ROUTES ======================
+
+// Get a football item by ID
 app.get("/api/footballs/:id", async (req, res) => {
   try {
     const item = await FootballItem.findById(req.params.id);
@@ -40,34 +87,19 @@ app.get("/api/footballs/:id", async (req, res) => {
   }
 });
 
-
-
-// POST route to add a football item
-app.post("/api/footballs/:id", async (req, res) => {
+// Add a new football item
+app.post("/api/footballs", async (req, res) => {
   try {
-    const newItem = new FootballItem({
-      title: req.body.title,
-      rating: req.body.rating,
-      badge: req.body.badge,
-      price: req.body.price,
-      discount: req.body.discount,
-      stockStatus: req.body.stockStatus,
-      mainImage: req.body.mainImage,
-      thumbnails: req.body.thumbnails,
-      highlights: req.body.highlights,
-      description: req.body.description,
-      offers: req.body.offers,
-    });
-
+    const newItem = new FootballItem(req.body);
     const savedItem = await newItem.save();
     res.status(201).json(savedItem);
-
   } catch (error) {
     console.error("❌ Error adding item:", error);
     res.status(500).json({ message: "Failed to add football item" });
   }
 });
 
+// ====================== SERVER LISTEN ======================
 
 const port = 5000;
 app.listen(port, () => {

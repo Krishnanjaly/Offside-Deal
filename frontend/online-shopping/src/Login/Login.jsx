@@ -1,9 +1,35 @@
-import React from "react";
-import { Link } from "react-router-dom"; 
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import logo from "./logo.png";
-import { color } from "framer-motion";
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const [form, setForm] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    axios
+      .post("http://localhost:5000/api/login", form)
+      .then((res) => {
+        alert(res.data.message);
+        // Optionally store token to localStorage
+        localStorage.setItem("token", res.data.token);
+        navigate("/Home");
+      })
+      .catch((err) => {
+        alert(err.response.data.error);
+      });
+  };
+
   return (
     <div style={styles.container}>
       <img src={logo} alt="Offside  Deals  Logo" style={styles.topLogo} />
@@ -12,15 +38,34 @@ const Login = () => {
       <div style={styles.card}>
         <h3 style={styles.title}>Offside Deals Login</h3>
 
-        <input type="email" placeholder="Email" style={styles.input} />
-        <input type="password" placeholder="Password" style={styles.input} />
+        <form onSubmit={handleLogin}>
+          <input
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="Email"
+            style={styles.input}
+            required
+          />
+          <input
+            type="password"
+            name="password"
+            value={form.password}
+            onChange={handleChange}
+            placeholder="Password"
+            style={styles.input}
+            required
+          />
 
-        <Link to="/Home"><button style={{ backgroundColor: "#0a0f1c", padding: "10px 20px", borderRadius: "8px" ,color:"white"}}
-          >Login</button></Link>
+          <button type="submit" style={styles.button}>
+            Login
+          </button>
+        </form>
 
         <p style={styles.signupText}>
           Don't have an account?{" "}
-          <Link to="/signup" style={{color:"#0a0f1c"}}>
+          <Link to="/signup" style={{ color: "#0a0f1c" }}>
             Create one
           </Link>
         </p>
@@ -63,13 +108,10 @@ const styles = {
     textAlign: "center",
     zIndex: 1,
   },
-    title: {
+  title: {
     marginBottom: "1.5rem",
     fontSize: "1.5rem",
     color: "#0A0F1C",
-    
-    letterSpacing: "1px",
-    textTransform: "uppercase",
   },
   input: {
     width: "100%",
@@ -82,25 +124,19 @@ const styles = {
     fontSize: "1rem",
   },
   button: {
-    backgroundColor: "#1E48FF",
+    backgroundColor: "#0a0f1c",
     color: "#fff",
     border: "none",
-    padding: "0.4rem 0",
-    fontSize: "1rem",
-    borderRadius: "5px",
-    width: "35%",
+    padding: "10px 20px",
+    borderRadius: "8px",
     cursor: "pointer",
-    marginTop: "1rem",
+    fontSize: "1rem",
+    marginBottom: "0.5rem",
   },
   signupText: {
     fontSize: "0.9rem",
     color: "#555",
     marginTop: "1rem",
-  },
-  signupLink: {
-    color: "#1E4CFF",
-    textDecoration: "none",
-    fontWeight: "bold",
   },
 };
 

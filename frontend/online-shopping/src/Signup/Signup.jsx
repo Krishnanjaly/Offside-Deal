@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
 import logo from "../Login/logo.png";
 
 const Signup = () => {
@@ -22,7 +23,7 @@ const Signup = () => {
     const strongPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/;
     if (!strongPassword.test(form.password)) {
       alert(
-        "Password must be at least 8 characters long and include uppercase, lowercase, number, and symbol."
+        "Password must be at least 8 characters and include uppercase, lowercase, number, and symbol."
       );
       return;
     }
@@ -32,18 +33,30 @@ const Signup = () => {
       return;
     }
 
-    alert("Sign up successful!");
-    navigate("/"); // Redirect to login
+    // Call API to register
+    axios
+      .post("http://localhost:5000/api/register", {
+        name: form.name,
+        email: form.email,
+        password: form.password,
+      })
+      .then((res) => {
+        alert(res.data.message);
+        navigate("/Login"); // move to login after success
+      })
+      .catch((err) => {
+        alert(err.response.data.error);
+      });
   };
 
   return (
     <div style={styles.container}>
       <Link to="/Login">
-      <button onClick={() => navigate("/")} style={styles.backButton}>
-        ← Back
-      </button></Link>
+        <button onClick={() => navigate("/")} style={styles.backButton}>
+          ← Back
+        </button>
+      </Link>
 
-      {/* Logos */}
       <img src={logo} alt="Top Logo" style={styles.topLogo} />
       <img src={logo} alt="Background Logo" style={styles.backgroundLogo} />
 
@@ -87,7 +100,16 @@ const Signup = () => {
             required
           />
 
-          <button type="submit" style={{ backgroundColor: "#0a0f1c", padding: "10px 20px", borderRadius: "8px" ,color:"white",marginBottom:"5px"}}>
+          <button
+            type="submit"
+            style={{
+              backgroundColor: "#0a0f1c",
+              padding: "10px 20px",
+              borderRadius: "8px",
+              color: "white",
+              marginBottom: "5px",
+            }}
+          >
             Sign Up
           </button>
         </form>
@@ -144,17 +166,6 @@ const styles = {
     backgroundColor: "#2a2a2a",
     color: "#fff",
     fontSize: "1rem",
-  },
-  button: {
-    backgroundColor: "#1E48FF",
-    color: "#fff",
-    border: "none",
-    padding: "0.4rem 0",
-    fontSize: "1rem",
-    borderRadius: "5px",
-    width: "30%",
-    cursor: "pointer",
-    marginTop: "0.5rem",
   },
   backButton: {
     position: "absolute",
